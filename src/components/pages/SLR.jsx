@@ -8,13 +8,12 @@ const SLR = () => {
     title={"Simple Linear Regression"}
 
     def={`Simple linear regression is a statistical method used to model the relationship between two variables. 
-      
+
       The goal is to find the best-fitting straight line that describes the relationship between a dependent variable (the one you're trying to predict) and an independent variable (the one you're using to make predictions).`}
 
     features={`The equation for simple linear regression is : Y = b0 + b1.X 
 
       The goal is to find the line that best fits the data points, minimizing the difference between the actual data points and the predicted values. 
-
       This is typically done using a method called least squares, which minimizes the sum of the squared differences between the observed values and the predicted values.`}
 
     img={slr}
