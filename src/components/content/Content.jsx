@@ -12,7 +12,7 @@ import NotToUse from './NotToUse'
 const Content = ({title, def, features, img, code, params, uses, adv, disadv, notuse}) => {
   return (
     <section 
-    className='mt-16 w-[67%] mx-auto bg-[#050505] text-[#e5e5e5]'
+    className='mt-26 w-[65%] mx-auto bg-[#ffffff] text-[#00000099]'
     >
       <Def title={title} def={def} />
       <Explain features={features} />

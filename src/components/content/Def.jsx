@@ -2,8 +2,8 @@ import React from 'react'
 
 const Def = ({title, def}) => {
   return (
-    <div className='bg-[#e76231] text-white p-10 border border-gray-700 rounded-lg'>
-      <p className='text-2xl font-semibold text-white'>
+    <div className='border border-gray-200 p-14 rounded-lg shadow-md'>
+      <p className='text-3xl font-semibold text-black'>
         {title}
       </p>
 

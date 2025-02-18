@@ -2,7 +2,7 @@ import React from 'react'
 
 const Image = ({img}) => {
   return (
-    <div className='mt-10'>
+    <div className='mt-16'>
       <img src={img} alt="image" className='w-[50%] mx-auto rounded-lg'/>
     </div>
   )

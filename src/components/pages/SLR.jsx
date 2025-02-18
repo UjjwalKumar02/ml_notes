@@ -1,5 +1,6 @@
 import React from 'react'
 import Content from '../content/Content'
+import slr from '../../../public/slr.png'
 
 const SLR = () => {
   return (
@@ -16,7 +17,7 @@ const SLR = () => {
 
       This is typically done using a method called least squares, which minimizes the sum of the squared differences between the observed values and the predicted values.`}
 
-    img={"../../../public/slr.png"}
+    img={slr}
 
     code={`from sklearn.linear_model import LinearRegression
       model = LinearRegression()

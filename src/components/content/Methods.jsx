@@ -2,8 +2,8 @@ import React from 'react'
 
 const Methods = ({code}) => {
   return (
-    <div className='mt-16 bg-[#e5e5e5] text-gray-800 p-10 rounded-lg border border-gray-700'>
-      <p className='text-xl font-semibold text-black'>
+    <div className='mt-16 p-14 rounded-lg border border-gray-200 shadow-md'>
+      <p className='text-2xl font-semibold text-black'>
         Methods
       </p>
 
