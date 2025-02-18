@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <nav className='w-[100%] flex justify-between items-center p-7 rounded-lg  text-black fixed top-0 bg-[#ffffff] bg-opacity-80 z-100'>
+    <nav className='w-[100%] flex justify-between items-center px-7 py-6 rounded-lg  text-black fixed top-0 bg-[#ffffff] bg-opacity-80 z-100'>
       <p className='text-xl font-bold'>
        ML_Notes
       </p>
