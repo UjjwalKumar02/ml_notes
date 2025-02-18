@@ -8,7 +8,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='bg-[#ffffff] md:text-lg text-sm'>
+    <div className='bg-[#ffffff] md:text-[1.25rem] text-[1rem]'>
      <Navbar />
      <SLR />
      <Footer />
