@@ -7,7 +7,7 @@ const Navbar = ({toggleList}) => {
        ML_Notes
       </p>
       <div className='flex gap-4 items-center'>
-        <button onClick={toggleList} className='font-semibold bg-black text-white border border-gray-800 rounded-lg px-3 py-1 hover:bg-gray-900'>Table of contents</button>
+        <button onClick={toggleList} className='font-semibold bg-black text-white border border-gray-800 rounded-lg px-3 py-1 hover:bg-gray-700 cursor-pointer'>Table of contents</button>
         <a href="" className='font-semibold md:block hidden'>About</a>
         <a href="" className='font-semibold md:block hidden'>Contact</a>
       </div>

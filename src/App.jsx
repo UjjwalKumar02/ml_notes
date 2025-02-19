@@ -39,12 +39,12 @@ function App() {
      
      
       {selectedComp === null && (
-        <div className='mt-40 flex flex-col w-fit gap-1 mx-auto'>
+        <div className='mt-40 flex flex-col w-fit gap-7 mx-auto'>
         {components.map(({id, label}) => (
          <button 
          key={id}
          onClick={() => handleClick(id)}
-         className='border-b border-b-gray-200 px-3 py-3 cursor-pointer'>{label}</button>
+         className='cursor-pointer hover:bg-gray-100 px-4 rounded-lg'>{label}</button>
         ))}
        </div>
       )}
