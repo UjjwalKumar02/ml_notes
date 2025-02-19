@@ -5,7 +5,7 @@ import mlr from '../../../public/mlr.jpg'
 const MLR = () => {
   return (
     <Content
-    title={"Multiple Linear Regression"}
+    title={"Polynomial Regression"}
 
     def={`Multiple linear regression is a statistical technique used to model the relationship between one dependent variable (also called the target variable) and two or more independent variables (predictors or features). It's an extension of simple linear regression.
 
