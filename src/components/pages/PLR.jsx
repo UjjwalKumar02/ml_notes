@@ -1,64 +1,58 @@
 import React from 'react'
 import Content from '../content/Content'
-import mlr from '../../../public/mlr.jpg'
+import poly from '../../../public/poly.png'
 
 const MLR = () => {
   return (
     <Content
     title={"Polynomial Regression"}
 
-    def={`Multiple linear regression is a statistical technique used to model the relationship between one dependent variable (also called the target variable) and two or more independent variables (predictors or features). It's an extension of simple linear regression.
+    def={`Polynomial regression is an extension of linear regression where the relationship between the independent variable(s) and the dependent variable is modeled as an nth-degree polynomial instead of a straight line.`}
 
-    In multiple linear regression, you try to find the best-fitting linear relationship between the dependent variable and the multiple independent variables.`}
-
-    features={`The formula for multiple linear regression is: Y = B0 + B1.X1 + B2.X2 + ... + Bn.Xn + e
+    features={`Linear regression models a straight-line relationship: Y = B0 +B1.X
       
-    Where:
-    Y => dependent variable.
-    X1, X2, ..., Xn => independent variables (predictors).
-    B0 => intercept (value of Y when all X's are zero).
-    B1, B2, ..., Bn => coefficients (weights) for each independent variable (represent the change in Y for unit change in corresponding X.)
-    e => error term (difference between predicted and actual values of Y).`}
+      Polynomial regression allows the model to fit a curved relationship by introducing higher-degree terms of the predictors: Y = B0 + B1.X + B2.X^2 + B3.X^3 + ...
+      
+      When the relationship between the predictor and the target is not linear (i.e., a curve rather than a straight line). It helps capture more complex patterns in the data while still using a regression-based approach.`}
 
-    img={mlr}
+    img={poly}
 
     code={`from sklearn.linear_model import LinearRegression
-      model = LinearRegression()
-      model.coef_
-      model.intercept_
+    from sklearn.preprocessing import PolynomialFeatures
+
+    poly = PolynomialFeatures(degree=2)
+    X_poly = poly.fit_transform(X)
+
+    model = LinearRegression()
+    model.fit(X_poly, y)
+
+    y_pred = model.predict(X_poly)
+`}
+
+    params={`>_ degree : Specifies the degree of the polynomial [Default = 2].
       
+    >_ include_bias : Decides whether to include an intercept (bias) term (a column of ones) [Default: True].
+      
+    >_ interaction_only : If True, only interaction features (combinations of different features) are generated, without individual powers like X^2 [Default: False].`}
 
-      # OLS(Ordinary Least Square)
+    uses={`>_ Non-linear Relationships : The relationship between variables is curved, not linear.
+      
+    >_ Curved Data Patterns : Your data shows a pattern like U-shaped or bell-shaped trends.`}
 
-      import statsmodels.api as sm
-      model_sm = sm.OLS()`}
-
-    params={`No such params`}
-
-    uses={`Multiple linear regression is used when you want to predict a continuous outcome based on two or more independent variables. It's best suited for situations where:
-
-      >_ You have multiple predictors influencing a target variable.
-      >_ The relationship between the predictors and the target is assumed to be linear.
-      >_ You need to understand how each predictor impacts the target, either for prediction or analysis.
-      >_ You want to control for confounding variables.(means accounting for other variables that might influence both independent and dependent variables, which could otherwise lead to misleading or biased results.)`}
-
-    adv={`<> Handles Multiple Predictors : Allows analysis of multiple factors affecting the outcome.
-      <> Simple and Interpretable.
-      <> Flexible : Useful for both prediction and understanding relationships between variables.
-      <> Modeling Interactions : Can capture interactions between predictors.
-      <> Predictive Power: Provides reliable predictions if the data is linear.`}
+    adv={`<> Simple to Implement.
+      <> Captures Non-Linear Relationships
+      <> Flexibility : Allows fitting more complex patterns compared to simple linear regression.
+      <> Improved Fit for Some Data : Can provide a better fit for data that shows polynomial trends (e.g., quadratic or cubic).`}
     
-    disadv={`<> Assumes Linearity.
-      <> Sensitive to Outliers.
-      <> Multicollinearity : Highly correlated predictors can make the model unreliable.
-      <> Including too many variables can lead to overfitting.
-      <> Assumes Independent Errors : Violations of independence in errors (e.g., in time series) can bias results.
-      <> Homoscedasticity : Assumes constant error variance; changing variance (heteroscedasticity) affects accuracy.`}
+    disadv={`<> Sensitivity to Outliers.
+      <> Increased Complexity : As the degree of the polynomial increases, the model becomes harder to interpret.
+      <> Overfitting : With higher-degree polynomials, the model can fit noise in the data, making it too complex and reducing generalizability.
+      <> Extrapolation Issues : The model can behave unpredictably outside the range of the training data, especially with high-degree polynomials.`}
 
-      notuse={`>_ If the relationship between predictors and the target is non-linear.
-        >_ When predictors are highly correlated with each other.
-        >_ If your data contains extreme outliers that could distort the model.
-        >_ Heteroscedasticity: When the variance of errors is not constant across the data.`}
+      notuse={`>_ Many Outliers.
+        >_ : If the relationship between variables is inherently linear.
+        >_ When predicting outside the data range, polynomial regression can behave unpredictably and give unrealistic results.
+        >_ If the degree of the polynomial is too high, the model may fit noise in the data, leading to poor generalization.`}
     />
   )
 }

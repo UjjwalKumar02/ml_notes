@@ -8,7 +8,7 @@ const Params = ({params}) => {
       </p>
 
       <div className='mt-8'>
-        <p>{params}</p>
+        <p className='whitespace-pre-line'>{params}</p>
       </div>
     </div>
   )
