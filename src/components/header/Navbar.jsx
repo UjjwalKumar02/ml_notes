@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = ({toggleList}) => {
   return (
-    <nav className='w-[100%] flex justify-between items-center px-7 md:py-9 py-7 rounded-lg text-black fixed top-0 bg-[#ffffff] bg-opacity-80 z-1000'>
+    <nav className='w-[100%] flex justify-between items-center px-7 md:py-7 py-5 rounded-lg text-black fixed top-0 bg-[#ffffff] bg-opacity-80 z-1000'>
       <p className='md:text-[1.5rem] text-[1.25rem] font-bold'>
        ML_Notes
       </p>

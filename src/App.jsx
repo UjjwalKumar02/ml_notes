@@ -46,7 +46,7 @@ function App() {
       <Navbar toggleList={toggleList}/>
       
         {selectedComp === null && (
-          <div className='mt-40 flex flex-col w-fit gap-7 mx-auto'>
+          <div className='mt-34 flex flex-col w-fit gap-7 mx-auto'>
           {components.map(({id, label}) => (
             <button 
             key={id}
