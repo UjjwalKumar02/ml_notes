@@ -17,13 +17,23 @@ function App() {
 
 
   const components = [
-    {id: 1, label: "Simple linear regression", component: Slr},
-    {id: 3, label: "Multiple linear regression", component: Mlr},
-    {id: 4, label: "Polynomial regression", component: Plr},
-    {id: 5, label: "Ridge regression", component: Plr},
-    {id: 6, label: "Lasso regression", component: Plr},
-    {id: 7, label: "ElasticNet regression", component: Plr},
-    {id: 8, label: "Updating soon...", component: Slr}
+    {id: 1, label: "Simple Linear Regression", component: Slr},
+    {id: 2, label: "Multiple Linear Regression", component: Mlr},
+    {id: 3, label: "Polynomial Regression", component: Plr},
+    {id: 4, label: "Ridge Regression", component: Plr},
+    {id: 5, label: "Lasso Regression", component: Plr},
+    {id: 6, label: "ElasticNet Regression", component: Plr},
+    {id: 7, label: "Hyperparameter Tuning", component: Slr},
+    {id: 8, label: "Logistic Regression", component: Slr},
+    {id: 9, label: "SVM", component: Slr},
+    {id: 10, label: "Naive Bayes", component: Slr},
+    {id: 11, label: "KNN", component: Slr},
+    {id: 12, label: "Decision Tree", component: Slr},
+    {id: 13, label: "Random Forest", component: Slr},
+    {id: 14, label: "AdaBoost", component: Slr},
+    {id: 15, label: "Gradient Boost", component: Slr},
+    {id: 16, label: "XgBoost", component: Slr},
+    {id: 17, label: "More coming...", component: Slr},
   ]
 
 
@@ -46,7 +56,7 @@ function App() {
       <Navbar toggleList={toggleList}/>
       
         {selectedComp === null && (
-          <div className='mt-34 flex flex-col w-fit gap-7 mx-auto'>
+          <div className='mt-34 flex flex-col w-fit gap-7 items-start mx-auto'>
           {components.map(({id, label}) => (
             <button 
             key={id}

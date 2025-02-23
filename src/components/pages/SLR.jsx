@@ -43,33 +43,32 @@ const SLR = () => {
   
         params={`No such params`}
   
-        uses={`Use simple linear regression when you have one independent variable and want to predict or understand the relationship between it and the dependent variable. 
+        uses={`>_ When you have one independent variable and want to predict or understand the relationship between dependent and independent variables. 
   
-        It works well when you believe the relationship between the two variables is linear and you want to quantify the strength of that relationship.`}
+        >_ When you believe the relationship between the two variables is linear.`}
   
-        adv={`<> It’s easy to understand and implement.
-          <> The coefficients (slope and intercept) directly show how the independent variable influences the dependent variable.
-          <> It is computationally efficient and can be quickly applied to small and large datasets.
-          <> Good for Linearly Related Data.
+        adv={`<> Good for Linearly Related Data.
+          <> It’s easy to understand and implement.
           <> With just one predictor variable, there is less chance of overfitting the model.
-          <> It serves as a foundation for more advanced regression models, like multiple linear regression or polynomial regression.`}
+          <> It is computationally efficient and can be quickly applied to small and large datasets.
+          <> The coefficients (slope and intercept) directly show how the independent variable influences the dependent variable.`}
         
-        disadv={`<> It only works well when the relationship between the variables is truly linear.
-          <> Outliers can significantly affect the slope of the regression line and lead to misleading results.
-          <> Simple linear regression can only handle a single independent variable.
-          <> The model assumes constant variance of errors across all levels of the independent variable. If the variance changes (heteroscedasticity), the model’s predictions may be unreliable.
+        disadv={`<> Only handle a single independent variable.
           <> Cannot Capture Complex Relationships.
-          <> It assumes that the data points are independent.`}
+          <> Assumes that the data points are independent.
+          <>  Works well when relationship between the variables is truly linear.
+          <> Outliers can significantly affect the slope of the regression line and lead to misleading results.
+          <> The model assumes constant variance of errors across all levels of the independent variable. If the variance changes (heteroscedasticity), the model’s predictions may be unreliable.`}
   
-          notuse={`>_ Non-linear Relationships.
+          notuse={`>_ Outliers.
             >_ Multiple Predictors.
-            >_ Outliers.
-            >_ Violation of Assumptions : Linearity, Independence of Errors(residuals (errors) must be independent), Normality(Residuals should be normally distributed), Homoscedasticity(variance of residuals should be constant across all values of the independent variable.)
-            If these assumptions are violated, the model may give biased or inaccurate results.
+            >_ Non-linear Relationships.
+            >_ High Multicollinearity: In a multiple regression scenario, independent variables are highly correlated with each other.
   
             >_ Autocorrelation : In cases of time series data or spatial data, where data points are correlated with previous or nearby ones, the independence assumption is violated.
   
-            >_ High Multicollinearity: If you are in a multiple regression scenario, but the independent variables are highly correlated with each other.`}
+            >_ Violation of Assumptions : Linearity, Independence of Errors(residuals (errors) must be independent), Normality(Residuals should be normally distributed), Homoscedasticity(variance of residuals should be constant across all values of the independent variable.)
+            If these assumptions are violated, the model may give biased or inaccurate results.`}
         />
       )}
     </>

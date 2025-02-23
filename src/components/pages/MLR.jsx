@@ -42,21 +42,21 @@ const MLR = () => {
       >_ You need to understand how each predictor impacts the target, either for prediction or analysis.
       >_ You want to control for confounding variables.(means accounting for other variables that might influence both independent and dependent variables, which could otherwise lead to misleading or biased results.)`}
 
-    adv={`<> Handles Multiple Predictors : Allows analysis of multiple factors affecting the outcome.
-      <> Simple and Interpretable.
+    adv={`<> Simple and Interpretable.
+      <> Can capture interactions between predictors.
+      <> Provides reliable predictions if the data is linear.
       <> Flexible : Useful for both prediction and understanding relationships between variables.
-      <> Modeling Interactions : Can capture interactions between predictors.
-      <> Predictive Power: Provides reliable predictions if the data is linear.`}
+      <> Handles Multiple Predictors : Allows analysis of multiple factors affecting the outcome.`}
     
     disadv={`<> Assumes Linearity.
       <> Sensitive to Outliers.
-      <> Multicollinearity : Highly correlated predictors can make the model unreliable.
       <> Including too many variables can lead to overfitting.
-      <> Assumes Independent Errors : Violations of independence in errors (e.g., in time series) can bias results.
+      <> Multicollinearity : Highly correlated predictors can make the model unreliable.
+      <> Assumes Independent Errors and violations of it (e.g., in time series) can bias results.
       <> Homoscedasticity : Assumes constant error variance; changing variance (heteroscedasticity) affects accuracy.`}
 
-      notuse={`>_ If the relationship between predictors and the target is non-linear.
-        >_ When predictors are highly correlated with each other.
+      notuse={`>_ When predictors are highly correlated with each other.
+        >_ If the relationship between predictors and the target is non-linear.
         >_ If your data contains extreme outliers that could distort the model.
         >_ Heteroscedasticity: When the variance of errors is not constant across the data.`}
     />
